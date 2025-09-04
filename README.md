@@ -24,52 +24,49 @@ The API also includes a **feedback mechanism**, allowing users to correct predic
 - NumPy (Numerical processing)  
 
 # Installation
-1. Clone the repository:
+1. Clone the repository :
    ```bash
    git clone https://github.com/akashaether12/Fake-News-Detection-API.git
    cd Fake-News-Detection-API
+   
+2.Create and activate a virtual environment (PyCharm recommended) :
+- python -m venv venv
+- venv\Scripts\activate     # On Windows
+- source venv/bin/activate  # On Mac/Linux
 
-2.Create and activate a virtual environment (PyCharm recommended):
-   python -m venv venv
-   venv\Scripts\activate     # On Windows
-   source venv/bin/activate  # On Mac/Linux
-
-3.Install dependencies:
-   pip install -r requirements.txt
+3.Install dependencies :
+- pip install -r requirements.txt
 
 # Running the API
-1.Start the server with:
-   uvicorn main:app --reload
+1.Start the server with : uvicorn main:app --reload
 
-2.The API will be available at:
-   http://127.0.0.1:8000
+2.The API will be available at : http://127.0.0.1:8000
 
-3.Interactive API documentation (Swagger UI) will be available at:
-   http://127.0.0.1:8000/docs
+3.Interactive API documentation (Swagger UI) will be available at : http://127.0.0.1:8000/docs
 
 # API Endpoints
 1. Predict Fake/Real News
 POST /predict
-Request body:
+Request body :
    {
      "title": "Breaking News",
      "text": "BREAKING: Celebrity endorses miracle cure doctors hate this!"
    }
-Response:
+Response :
    {
      "prediction": "REAL",
      "confidence": 0.87
    }
 
-2. Provide Feedback
+3. Provide Feedback
 POST /feedback
-Request body:
+Request body :
    {
      "id": "12345",
      "correct_label": "FAKE"
    }
 
-3. Retrain Model
+4. Retrain Model
 POST /retrain
 Retrains the model using all feedback stored in the database.
 
