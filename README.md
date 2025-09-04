@@ -74,13 +74,12 @@ POST /retrain
 Retrains the model using all feedback stored in the database.
 
 # Project Structure
-.
-├── .model_version       # Version info for the ML model
-├── fake_news.db         # Database for storing news and feedback
-├── fake_news_api.py     # Main FastAPI backend file (API routes + model usage)
-├── model.joblib         # Serialized trained ML model
-├── README.md            # Project documentation
-└── LICENSE              # License file
+- .model_version       # Version info for the ML model
+- fake_news.db         # Database for storing news and feedback
+- fake_news_api.py     # Main FastAPI backend file (API routes + model usage)
+- model.joblib         # Serialized trained ML model
+- README.md            # Project documentation
+- LICENSE              # License file
 
 # License
 This project is licensed under the MIT License. See the LICENSE file for details.
